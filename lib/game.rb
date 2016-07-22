@@ -13,4 +13,8 @@ class Game
     player.damage_received
   end
 
+  def switch
+    @players.reverse!
+  end
+
 end

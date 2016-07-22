@@ -13,4 +13,12 @@ feature 'Attacking' do
    expect(page).not_to have_content('Pete: 60HP')
    expect(page).to have_content('Pete: 50HP')
  end
+
+ scenario 'switches players' do
+   sign_in_and_play
+   click_button("Attack")
+   click_link("OK")
+   click_link("Switch")
+   expect(page).to have_content("Pete attacks")
+ end
 end

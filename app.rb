@@ -25,7 +25,13 @@ class Battle < Sinatra::Base
     @player_1 = $game.players[0]
     @player_2 = $game.players[1]
     Game.new(@player_1, @player_2).attack(@player_2)
+    $game.switch
     erb :attack
+  end
+
+  get '/switch' do
+    $game.switch
+    redirect "/play"
   end
 
   # start the server if ruby file executed directly
