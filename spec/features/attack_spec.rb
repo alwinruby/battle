@@ -18,7 +18,7 @@ feature 'Attacking' do
    sign_in_and_play
    click_button("Attack")
    click_link("OK")
-   click_link("Switch")
+  #  click_link("Switch")
    expect(page).to have_content("Pete attacks")
  end
 end

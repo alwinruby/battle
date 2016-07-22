@@ -29,10 +29,10 @@ class Battle < Sinatra::Base
     erb :attack
   end
 
-  get '/switch' do
-    $game.switch
-    redirect "/play"
-  end
+  # get '/switch' do
+  #   $game.switch
+  #   redirect "/play"
+  # end
 
   # start the server if ruby file executed directly
   run! if app_file == $0

@@ -13,4 +13,9 @@ describe Game do
     end
   end
 
+  describe "#game_over?" do
+    
+    expect(subject.game_over?).to eq true
+  end
+
 end
