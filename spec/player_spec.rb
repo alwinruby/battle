@@ -1,18 +1,18 @@
 require 'player'
 
 describe Player do
-  subject(:dave) { Player.new('Dave') }
   subject(:john) { Player.new('John') }
+  subject(:pete) { Player.new('Pete') }
 
   describe '#name' do
     it 'returns the name' do
-      expect(dave.name).to eq 'Dave'
+      expect(john.name).to eq 'John'
     end
   end
 
   describe "#hit_points" do
     it 'returns the player default HP' do
-     expect(dave.hit_points).to eq Player::DEFAULT_HITPOINTS
+     expect(pete.hit_points).to eq Player::DEFAULT_HITPOINTS
     end
   end
 
